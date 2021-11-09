@@ -7,6 +7,7 @@ from .serializers import *
 from rest_framework.authtoken.models import Token
 from rest_framework import serializers
 from rest_framework import viewsets, mixins
+import json
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -54,8 +55,10 @@ class Report(APIView):
         student = StudentSerializer(student_list, many=True)
         teacher = TeacherSerializer(teacher_list, many=True)
 
-        # dict1 = {"student": student, "teacher": teacher}
-        # return render(request, 'accounts/report.html', context=dict1 )
+        dict1 = {"student": student, "teacher": teacher}
+        # json_string = json.dumps(dict1)
+        json_string = json.loads(dict1.content)
+        return render(request, 'accounts/report.html', {'dataset':json_string} )
         
         return Response({"student":student.data, "teacher":teacher.data})
 

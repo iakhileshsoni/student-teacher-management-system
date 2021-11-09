@@ -9,8 +9,14 @@
   <title>Report of Student</title>
 </head>
 <body>
+
   <h2 style="padding-left:500px;">Report Card</h2>
-  <table id="employees"></table>
+  {% for key, value in dataset.items %}
+  <table id="employees">
+    {{key}}: {{value}}
+  </table>
+  {% endfor %}
+
 </body>
 </html>
 
