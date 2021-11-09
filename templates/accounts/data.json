@@ -1,0 +1,57 @@
+{
+    "student": [
+        {
+            "id": 1,
+            "person": {
+                "id": 2,
+                "password": "mad",
+                "last_login": null,
+                "is_superuser": false,
+                "is_student": true,
+                "first_name": "Maddy",
+                "username": "Maddy12",
+                "is_staff": false,
+                "is_active": true,
+                "created_at": "2021-11-06T06:06:03.949297Z",
+                "updated_at": "2021-11-06T06:06:03.949297Z",
+                "groups": [],
+                "user_permissions": []
+            },
+            "teacher": {
+                "id": 1,
+                "person": 3,
+                "subject": [
+                    1
+                ]
+            }
+        }
+    ],
+    "teacher": [
+        {
+            "id": 1,
+            "person": {
+                "id": 3,
+                "password": "ram",
+                "last_login": null,
+                "is_superuser": false,
+                "is_student": false,
+                "first_name": "Ram",
+                "username": "Ram23",
+                "is_staff": true,
+                "is_active": true,
+                "created_at": "2021-11-06T06:06:20.531296Z",
+                "updated_at": "2021-11-06T06:06:20.531296Z",
+                "groups": [],
+                "user_permissions": []
+            },
+            "subject": [
+                {
+                    "id": 1,
+                    "name": "Mathematics",
+                    "created_at": "2021-11-06T11:36:00Z",
+                    "deleted_at": "2021-11-06T11:36:00Z"
+                }
+            ]
+        }
+    ]
+}
