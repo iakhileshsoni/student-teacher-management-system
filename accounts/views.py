@@ -54,11 +54,6 @@ class Report(APIView):
         teacher_list = Teacher.objects.all()
         student = StudentSerializer(student_list, many=True)
         teacher = TeacherSerializer(teacher_list, many=True)
-
-        dict1 = {"student": student, "teacher": teacher}
-        # json_string = json.dumps(dict1)
-        json_string = json.loads(dict1.content)
-        return render(request, 'accounts/report.html', {'dataset':json_string} )
         
         return Response({"student":student.data, "teacher":teacher.data})
 
