@@ -16,7 +16,6 @@ class StudentSerializer(serializers.ModelSerializer):
         # depth = 1
         
     def to_representation(self, instance):
-        # import ipdb; ipdb.set_trace()
         response = super().to_representation(instance)
         response["username"] = instance.student.username
         
