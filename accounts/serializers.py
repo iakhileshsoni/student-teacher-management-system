@@ -19,13 +19,7 @@ class StudentSerializer(serializers.ModelSerializer):
         # import ipdb; ipdb.set_trace()
         response = super().to_representation(instance)
         response["username"] = instance.student.username
-        # Teacher Response
-        data = instance.teacher.__dict__
-        print("data: ", data)
-        data.pop('_state')
-        data['teacher_id']
-        data['teacher_id'] = Teacher.objects.filter(id= data['teacher_id']).values()
-        print("Teacher: ", data['teacher_id'])
+        
         return response
 
 
